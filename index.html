@@ -28,11 +28,6 @@ a,button{cursor:none}::-webkit-scrollbar{width:0}
 .cur-text{position:fixed;pointer-events:none;z-index:10001;font-size:.46rem;color:var(--sage-dark);letter-spacing:.2em;text-transform:uppercase;opacity:0;transition:opacity .3s;font-weight:400}
 .cur-text.show{opacity:1}
 
-/* ============ PLACEHOLDER ============ */
-.ph{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%;gap:10px}
-.ph-icon{width:32px;height:32px;opacity:.08}
-.ph-icon svg{width:100%;height:100%;fill:currentColor;color:var(--fg)}
-.ph-text{font-size:.54rem;color:rgba(26,26,24,.07);letter-spacing:.2em;text-transform:uppercase;font-weight:400}
 
 /* ============ NAV — 중앙 로고 ============ */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:28px 48px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;transition:all .5s}
@@ -95,7 +90,7 @@ nav.scrolled{padding:16px 48px;background:rgba(250,250,248,.92);backdrop-filter:
 /* ============ INSTRUCTOR ============ */
 .instructor{padding:160px 48px;display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:center;max-width:1000px}
 .inst-img{aspect-ratio:3/4;overflow:hidden;position:relative}
-.inst-img-inner{width:100%;height:100%;background:linear-gradient(155deg,#E8EDE5,#d8e0d4);display:flex;align-items:center;justify-content:center}
+.inst-img-inner{width:100%;height:100%;background:url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&q=80') center/cover no-repeat;display:flex;align-items:center;justify-content:center}
 .inst-info{}
 .inst-info h3{font-family:var(--body);font-size:1.5rem;font-weight:200;margin-bottom:4px;letter-spacing:.02em}
 .inst-role{font-size:.56rem;color:var(--sage);letter-spacing:.25em;text-transform:uppercase;font-weight:500;margin-bottom:24px}
@@ -113,9 +108,9 @@ nav.scrolled{padding:16px 48px;background:rgba(250,250,248,.92);backdrop-filter:
 .sl-zone-prev{left:0}.sl-zone-next{right:0}
 .gal-inner{width:100%;height:100%;transition:all .6s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;justify-content:center}
 .gal-item:hover .gal-inner{transform:scale(1.04)}
-.gl-1{background:linear-gradient(155deg,#E8EDE5,#d0dac8)}.gl-2{background:linear-gradient(155deg,#e4e8e0,#d4d8d0)}
-.gl-3{background:linear-gradient(155deg,#dce4d8,#c8d4c0)}.gl-4{background:linear-gradient(155deg,#e0e8dc,#d0dcc8)}
-.gl-5{background:linear-gradient(155deg,#e8ece4,#d8e0d4)}.gl-6{background:linear-gradient(155deg,#d8e0d0,#c4d0bc)}
+.gl-1{background:url('https://images.unsplash.com/photo-1623874514711-0f321325f318?w=800&q=80') center/cover no-repeat}.gl-2{background:url('https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800&q=80') center/cover no-repeat}
+.gl-3{background:url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80') center/cover no-repeat}.gl-4{background:url('https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=800&q=80') center/cover no-repeat}
+.gl-5{background:url('https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80') center/cover no-repeat}.gl-6{background:url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80') center/cover no-repeat}
 .gal-caption{position:absolute;bottom:20px;left:20px;font-size:.56rem;color:rgba(26,26,24,.25);letter-spacing:.15em;text-transform:uppercase;font-weight:400}
 .slider-counter{position:absolute;top:20px;right:20px;font-family:var(--display);font-size:.56rem;color:rgba(139,154,126,.3);letter-spacing:.1em;z-index:2}
 .slider-arrows{display:flex;gap:8px;padding:20px 48px 0}
@@ -322,7 +317,7 @@ footer a{color:var(--sage);text-decoration:none;font-size:.55rem;transition:colo
 <!-- ======== INSTRUCTOR ======== -->
 <section class="instructor rv" id="instructor">
   <div class="inst-img" data-hover="Profile">
-    <div class="inst-img-inner"><div class="ph"><div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><span class="ph-text">강사 사진</span></div></div>
+    <div class="inst-img-inner"></div>
   </div>
   <div class="inst-info">
     <div class="sec-label">Instructor</div>
@@ -348,12 +343,12 @@ footer a{color:var(--sage);text-decoration:none;font-size:.55rem;transition:colo
     <div class="sl-zone sl-zone-prev" id="galZonePrev"></div>
     <div class="sl-zone sl-zone-next" id="galZoneNext"></div>
     <div class="slider-track" id="galTrack">
-      <div class="gal-item" data-hover="View"><div class="gal-inner gl-1"><div class="ph"><div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><span class="ph-text">공간 사진</span></div></div><span class="gal-caption">리포머룸</span><span class="slider-counter">01 / 06</span></div>
-      <div class="gal-item" data-hover="View"><div class="gal-inner gl-2"><div class="ph"><div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><span class="ph-text">공간 사진</span></div></div><span class="gal-caption">요가룸</span><span class="slider-counter">02 / 06</span></div>
-      <div class="gal-item" data-hover="View"><div class="gal-inner gl-3"><div class="ph"><div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><span class="ph-text">공간 사진</span></div></div><span class="gal-caption">프라이빗룸</span><span class="slider-counter">03 / 06</span></div>
-      <div class="gal-item" data-hover="View"><div class="gal-inner gl-4"><div class="ph"><div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><span class="ph-text">공간 사진</span></div></div><span class="gal-caption">라운지</span><span class="slider-counter">04 / 06</span></div>
-      <div class="gal-item" data-hover="View"><div class="gal-inner gl-5"><div class="ph"><div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><span class="ph-text">공간 사진</span></div></div><span class="gal-caption">수업 모습</span><span class="slider-counter">05 / 06</span></div>
-      <div class="gal-item" data-hover="View"><div class="gal-inner gl-6"><div class="ph"><div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><span class="ph-text">공간 사진</span></div></div><span class="gal-caption">디테일</span><span class="slider-counter">06 / 06</span></div>
+      <div class="gal-item" data-hover="View"><div class="gal-inner gl-1"></div><span class="gal-caption">리포머룸</span><span class="slider-counter">01 / 06</span></div>
+      <div class="gal-item" data-hover="View"><div class="gal-inner gl-2"></div><span class="gal-caption">요가룸</span><span class="slider-counter">02 / 06</span></div>
+      <div class="gal-item" data-hover="View"><div class="gal-inner gl-3"></div><span class="gal-caption">프라이빗룸</span><span class="slider-counter">03 / 06</span></div>
+      <div class="gal-item" data-hover="View"><div class="gal-inner gl-4"></div><span class="gal-caption">라운지</span><span class="slider-counter">04 / 06</span></div>
+      <div class="gal-item" data-hover="View"><div class="gal-inner gl-5"></div><span class="gal-caption">수업 모습</span><span class="slider-counter">05 / 06</span></div>
+      <div class="gal-item" data-hover="View"><div class="gal-inner gl-6"></div><span class="gal-caption">디테일</span><span class="slider-counter">06 / 06</span></div>
     </div>
   </div>
   <div class="slider-arrows">
@@ -553,12 +548,12 @@ document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 const lb=document.getElementById('lb'),lbInner=document.getElementById('lbInner'),lbTitle=document.getElementById('lbTitle'),lbDesc=document.getElementById('lbDesc'),lbCap=document.getElementById('lbCap'),lbCount=document.getElementById('lbCount');
 const lbItems=[];let lbIdx=0;
 const bgMap={
-  'gl-1':'linear-gradient(155deg,#E8EDE5,#d0dac8)','gl-2':'linear-gradient(155deg,#e4e8e0,#d4d8d0)',
-  'gl-3':'linear-gradient(155deg,#dce4d8,#c8d4c0)','gl-4':'linear-gradient(155deg,#e0e8dc,#d0dcc8)',
-  'gl-5':'linear-gradient(155deg,#e8ece4,#d8e0d4)','gl-6':'linear-gradient(155deg,#d8e0d0,#c4d0bc)',
-  'inst':'linear-gradient(155deg,#E8EDE5,#d8e0d4)'
+  'gl-1':'url(https://images.unsplash.com/photo-1623874514711-0f321325f318?w=1200&q=80) center/cover no-repeat','gl-2':'url(https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1200&q=80) center/cover no-repeat',
+  'gl-3':'url(https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80) center/cover no-repeat','gl-4':'url(https://images.unsplash.com/photo-1600618528240-fb9fc964b853?w=1200&q=80) center/cover no-repeat',
+  'gl-5':'url(https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=1200&q=80) center/cover no-repeat','gl-6':'url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80) center/cover no-repeat',
+  'inst':'url(https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&q=80) center/cover no-repeat'
 };
-const phSVG='<div class="ph"><div class="ph-icon"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg></div><span class="ph-text">사진</span></div>';
+
 
 // 강사 사진 1장
 lbItems.push({bg:'inst',title:'김소요',desc:'Head Instructor · Founder'});
@@ -581,7 +576,7 @@ function closeLb(){lb.classList.remove('open');document.body.style.overflow='';
 function renderLb(){
   const item=lbItems[lbIdx];if(!item)return;
   lbInner.style.opacity='0';
-  setTimeout(()=>{lbInner.style.background=bgMap[item.bg]||'var(--bg2)';lbInner.innerHTML=phSVG;lbInner.style.opacity='1'},150);
+  setTimeout(()=>{lbInner.style.background=bgMap[item.bg]||'var(--bg2)';lbInner.innerHTML='';lbInner.style.opacity='1'},150);
   if(item.title){lbCap.style.display='';lbTitle.textContent=item.title;lbDesc.textContent=item.desc}
   else{lbCap.style.display='none'}
   lbCount.textContent=`${lbIdx+1} / ${lbItems.length}`;
