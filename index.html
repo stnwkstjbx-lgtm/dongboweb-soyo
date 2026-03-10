@@ -1232,6 +1232,8 @@ nav.scrolled{padding:16px 48px;background:rgba(250,250,248,.92);backdrop-filter:
 </div>
 
 <script>
+if('scrollRestoration' in history)history.scrollRestoration='manual';
+window.scrollTo(0,0);
 // ============ PRELOADER ============
 window.addEventListener('load',function(){
   setTimeout(function(){document.getElementById('preloader').classList.add('hide')},1400);
